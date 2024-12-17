@@ -36,8 +36,9 @@
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    mysqli_close($conn);
-
     header("Location: https://www.google.com/search?q="  .  urlencode($search));
     exit();
+    
+    mysqli_close($conn);
+
 ?>
