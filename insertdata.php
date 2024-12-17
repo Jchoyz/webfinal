@@ -12,8 +12,8 @@
     }
 
 
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        //$name = htmlspecialchars($_POST['firstname']) . " " . htmlspecialchars($_POST['lastname']);
         $search = htmlspecialchars($_POST['searchterm']);
         $ip = htmlspecialchars($_SERVER['REMOTE_ADDR']);
 
@@ -30,15 +30,15 @@
     }
 
 
+
     if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
     } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    header("Location: https://www.google.com/search?q="  .  urlencode($search));
-    exit();
-    
     mysqli_close($conn);
 
+    header("Location: https://www.google.com/search?q="  .  urlencode($search));
+    exit();
 ?>
