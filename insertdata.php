@@ -15,7 +15,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $search = htmlspecialchars($_POST['searchterm']);
-        $ip = htmlspecialchars($_SERVER['REMOTE_ADDR']);
+        $ip = htmlspecialchars($_SERVER['IPaddr']);
 
         // Insert data into the database
         $sql = "INSERT INTO HackingUsers (searchterm, IPaddr)
