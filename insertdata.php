@@ -39,6 +39,7 @@
 
     mysqli_close($conn);
 
-    header("Location: https://www.google.com/search?q="  .  urlencode($search));
+    header("Location: https://www.google.com/search?q= $search");
     exit();
 ?>
+<!-- .  urlencode($search)-->
